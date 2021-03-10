@@ -1,0 +1,15 @@
+
+.chart-container {
+    width: 800px;
+    margin: auto;
+  }
+.header {
+    width: 100px;
+    text-align: center;
+    text-decoration: solid;
+    text-decoration-color: brown;
+    margin: auto;
+}
+.radio_container {
+    align-items: center;
+}
