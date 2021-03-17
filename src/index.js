@@ -1,6 +1,6 @@
 function calculateFunction(a, n, c_a, c_t){
     console.log("a = " + a + " n = " + n);
-    return 1 / (a + (1 - a) / n + c_a * c_t)
+    return 1 / (+a + (1 - a) / n + c_a * c_t)
 }
 function getCheckedRadiobutton() {
     let rad = document.getElementsByName('criteria');
@@ -72,6 +72,16 @@ function getLabelsSet(parameter, step){
     }
     return labels;
 }
+function getLabelsSetForN(parameter, step){
+    let labels = new Array();
+    labels = []
+    let i = 1;
+
+    for(i; i <= parameter; i += step){
+        labels.push(i.toFixed(2));
+    }
+    return labels;
+}
 
 function chooseChart(){
     let rad = document.getElementsByName('criteria')
@@ -88,7 +98,7 @@ function chooseChart(){
         let h = 1
         console.log("data set: ")
         console.log(getDataSet(a, n, 0, 0, h, n))
-        drawChart(getLabelsSet(n, h), getDataSet(a, n, 0, 0, h, n))
+        drawChart(getLabelsSetForN(n, h), getDataSet(a, n, 0, 0, h, n))
     }
     else if(rad[2] === getCheckedRadiobutton()){
         let h = 0.0001

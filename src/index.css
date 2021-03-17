@@ -10,6 +10,13 @@
     text-decoration-color: brown;
     margin: auto;
 }
-.radio_container {
+.input_container {
+    text-align: center;
     align-items: center;
+    align-self: center;
+}
+.radio_container {
+    text-align: center;
+    align-items: center;
+    align-self: center;
 }
